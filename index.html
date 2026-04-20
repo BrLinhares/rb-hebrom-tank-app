@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>RB Hebrom - Sondagem</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  	<div class="logo-box">
+  		<img src="logo.jpeg" class="logo" alt="Logo">
+	</div>
+
+  <h2>Sondagem de Tanques</h2>
+
+  <select id="tanque">
+    <option value="BB">Tanque BB</option>
+    <option value="BE">Tanque BE</option>
+  </select>
+
+  <input type="number" id="metro" placeholder="Sondagem (metros)" step="0.01">
+
+  <button onclick="calcular()">Calcular Volume</button>
+
+  <div class="resultado" id="resultado"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
