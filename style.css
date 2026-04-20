@@ -5,7 +5,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* IMPORTANTE */
@@ -19,17 +19,17 @@ body {
   padding: 30px;
   border-radius: 20px;
   width: 100%;
-  max-width: 350px;
+  max-width: 400px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.4);
   text-align: center;
   color: white;
   border: 1px solid rgba(255,255,255,0.1);
 }
 
-/* LOGO ESTILIZADA */
+/* LOGO */
 .logo-box {
   background: white;
-  padding: 15px 20px;
+  padding: 8px 15px;
   border-radius: 50px;
   display: inline-block;
   margin-bottom: 20px;
@@ -39,46 +39,58 @@ body {
   width: 100px;
 }
 
-/* TITULO */
-h2 {
-  margin-bottom: 20px;
-  font-weight: 500;
-}
-
 /* CAMPOS */
 select, input {
   width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 10px;
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 12px;
   border: none;
   font-size: 16px;
-  outline: none;
 }
 
 /* BOTÃO */
 button {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   background: linear-gradient(45deg, #00c853, #00e676);
   color: white;
   font-size: 18px;
   cursor: pointer;
-  transition: 0.3s;
-  margin-top: 10px;
-}
-
-button:hover {
-  transform: scale(1.03);
-  background: linear-gradient(45deg, #00b248, #00c853);
 }
 
 /* RESULTADO */
 .resultado {
   margin-top: 20px;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
-  letter-spacing: 1px;
+}
+
+/* 📱 MODO CELULAR (AGORA FICA FULLSCREEN) */
+@media (max-width: 600px) {
+
+  body {
+    align-items: flex-start;
+  }
+
+  .container {
+    max-width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    padding: 25px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
 }
